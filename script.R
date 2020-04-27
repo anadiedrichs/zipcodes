@@ -3,11 +3,11 @@
 library(maps)
 data(world.cities)
 
-#View(world.cities)
+head(world.cities)
 
 library(dplyr)
 dataset <- world.cities %>%
-           select(name, country.etc,capital)
+           select(name, country.etc,capital) 
 
 write.csv(dataset,file="cities-countries.csv")
 
@@ -21,4 +21,4 @@ unlink(temp)
 names(ZipCodes) = c("CountryCode", "zip", "PlaceName", 
                     "AdminName1", "AdminCode1", "AdminName2", "AdminCode2", 
                     "AdminName3", "AdminCode3", "latitude", "longitude", "accuracy")
-View(ZipCodes)
+head(ZipCodes)
